@@ -1,12 +1,12 @@
 ## Toward MIT
 
-Scripts to scrape quiz content off Edx, remove answers & consolidate to a single html for print-out/practice/review purposes.
+Scripts to scrape quiz content off EdX, remove answers & consolidate to a single html for print-out/practice/review purposes.
 
 ### Requirements
 This project requires:
 
 - Python 3, and
-- a Unix based operation system (e.g. MacOS or Linux). Sorry Windows users, you deserve a better operating system.
+- a Unix based operating system (e.g. MacOS, Linux or Linux Subsystem for Windows 10).
 
 ### Preparation
 
@@ -38,10 +38,10 @@ These headers can be found by doing the following.
 (instructions are with the Chrome or Chromium web-browser, and tested using Linux & MacOS)
 
 1. Open your edX dashboard, logging in as necessary
-2. Open 'Developer Tools', which is a sub-menu item from 'More tools' in the menu
+2. Open 'Developer Tools', which is a sub-menu item from 'More tools' in the Chrome/Chromium menu
 3. Choose the 'Network' tab in the Developer pane
 4. Reload the dashboard web-page
-5. Using the first entry in the 'Network' tab, named 'dashboard', open up the context (right-click) menu and choose 'Copy as cURL'
+5. Using the first entry in the 'Network' tab, named 'dashboard', open up the context (right-click) menu and choose 'Copy as cURL' (note, use 'Copy as cURL (bash)' on Windows Linux subsystem).
 6. Using a text editor, copy all the '-H' options (which will follow the "curl 'https://courses.edx.org/dashboard'"), but DO NOT copy any option which will compress the output (e.g. "-H 'Accept-Encoding: gzip, deflate, br'" and "--compressed". There will be many lines of '-H' options!
 7. Copy the required '-H' options into your scrape.sh file, replacing '[your request headers]'
 
